@@ -1,0 +1,80 @@
+[
+  {
+    "nodes" : [
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{0, 0}, {540, 176}}",
+        "class" : "Label",
+        "attributes" : {
+          "uuid" : "79ACA9FE-1178-4CF9-9AE1-5E2CD5A401BB",
+          "flex" : "WH",
+          "corner_radius" : 0,
+          "background_color" : "RGBA(1.000000,0.433333,0.433333,1.000000)",
+          "frame" : "{{85, 224}, {150, 32}}",
+          "border_width" : 0,
+          "alignment" : "center",
+          "text" : "Which game do you want to play?",
+          "alpha" : 1,
+          "font_name" : "KGSecondChancesSketch",
+          "class" : "Label",
+          "name" : "label1",
+          "font_size" : 18
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{193, 240}, {150, 87}}",
+        "class" : "Button",
+        "attributes" : {
+          "action" : "button_tapped",
+          "border_width" : 1,
+          "frame" : "{{120, 224}, {80, 32}}",
+          "title" : "Photo Touch",
+          "uuid" : "6E3AEB08-25CF-4C16-AE1B-E6C1A6678B5C",
+          "class" : "Button",
+          "corner_radius" : 15,
+          "background_color" : "RGBA(0.695652,1.000000,0.543478,1.000000)",
+          "name" : "button1",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{193, 382}, {150, 79}}",
+        "class" : "Button",
+        "attributes" : {
+          "action" : "button_tapped",
+          "border_width" : 1,
+          "frame" : "{{120, 224}, {80, 32}}",
+          "title" : "Photo Rocket",
+          "class" : "Button",
+          "uuid" : "6E3AEB08-25CF-4C16-AE1B-E6C1A6678B5C",
+          "corner_radius" : 15,
+          "background_color" : "RGBA(0.826087,0.478261,1.000000,1.000000)",
+          "font_size" : 15,
+          "name" : "button2"
+        },
+        "selected" : false
+      }
+    ],
+    "frame" : "{{0, 0}, {540, 540}}",
+    "class" : "View",
+    "attributes" : {
+      "name" : "Play_games",
+      "enabled" : true,
+      "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "flex" : ""
+    },
+    "selected" : false
+  }
+]
