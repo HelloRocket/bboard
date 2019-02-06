@@ -180,11 +180,17 @@ class Photorocket (Scene):
                                     
             self.bitlist.remove(targetBit)
             self.showlist.append(targetBit)
-        
+            
+        self.winbit()
+            
+    def winbit(self):
+        '''Chooses winning bit and play the corresponding sound file.'''
         snum = len(self.showlist)     
         winbit = self.showlist[randrange(snum)]
         #print(winbit)
-        speech.say(winbit)
+        #speech.say(winbit, 'en-GB')
+        sound.play_effect(winbit.lower()+'.mp3')
+        sound.play_effect(winbit.lower()+'.caf')
         self.winTex = str(winbit)
         
     

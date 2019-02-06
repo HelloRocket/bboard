@@ -1,11 +1,9 @@
-#from photo_touch import *
-#from photo_rocket import *
-#import os
-#print os.path.abspath("photo_touch.py")
-
+import ui
 import runpy
+import time
 
 def choose_game():
+    '''Prompts player to choose and start a game with boards.'''
     print('Do you want to play photo touch or photo rocket?')
     game_choice = input()
 
@@ -23,5 +21,23 @@ def choose_game():
         print('last error')
         choose_game()
         
-choose_game()
+def button_tapped(sender):
+    #'@type sender: ui.Button'
+    
+    t = sender.title
+    
+    button = sender.superview['button1']
+    button2 = sender.superview['button2']
+    
+    if t == 'Photo Touch':
+        runpy.run_path('photo_touch.py')
+        
+    
+    if t == 'Photo Rocket':
+        runpy.run_path('photo_rocket.py')
+    
+    
+v = ui.load_view()
+v.present('sheet')
+#choose_game()
 
