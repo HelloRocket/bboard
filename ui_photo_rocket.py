@@ -1,4 +1,5 @@
 import ui
+import os
 from plistlib import *
 from random import randrange
 import speech
@@ -13,7 +14,7 @@ class Photorocket (ui.View):
     def __init__(self):    
         self.name = 'Photorocket'                                    
         self.background_color = 'lightblue'
-        
+
         self.setup()
 
     def did_load(self):
@@ -50,7 +51,9 @@ class Photorocket (ui.View):
         self.bluePoint = 0
         self.multitouch_enabled=False
         self.end_game = False
-        self.playTouch(self.originlist)       
+        self.playTouch(self.originlist) 
+        
+        
         
     def button_tapped(self, sender):
         '''Checks if sender is the winning bit'''
@@ -82,7 +85,7 @@ class Photorocket (ui.View):
             if self.redPoint==1:
                 self.red_points.text = (f'Red has 1 point!')
                 
-            elif self.redPoint>9:
+            elif self.redPoint>4:
                 self.red_points.text = ('Red Wins!')
                 self.end_game = True
                 
@@ -97,7 +100,7 @@ class Photorocket (ui.View):
             if self.bluePoint==1:
                 self.blue_points.text = (f'Blue has 1 point!')
                 
-            elif self.bluePoint>9:
+            elif self.bluePoint>4:
                 self.blue_points.text = ('Blue Wins!')
                 self.end_game = True
                 
@@ -122,7 +125,8 @@ class Photorocket (ui.View):
             targetBit = bitlist[randrange(bnum)]
             bitname = str(targetBit)
             targetPic = str(targetBit)+'.jpg'
-            picname = targetPic.lower()
+            picname =  targetPic.lower()
+            
 
             self.button = ui.Button(bitname)                   
             self.button.name = bitname

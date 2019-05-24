@@ -7,6 +7,7 @@ from time import sleep
 
 '''fileName is the plist to import'''
 fileName = 'Bitsboard.plist'
+#fileName = 'LPDB00/Bitsboard.plist'
 
 class Phototouch (ui.View):
     def __init__(self):    
@@ -60,7 +61,7 @@ class Phototouch (ui.View):
             #print('bit '+bitname)
             targetPic = str(targetBit)+'.jpg'
             picname = targetPic.lower()
-            #print('pic '+picname)
+            print('pic '+picname)
             self.button = ui.Button(bitname)                   # [4]
             (screenX, screenY) = ui.get_screen_size()   
             self.button.frame = (0, 0, 200, 200)
